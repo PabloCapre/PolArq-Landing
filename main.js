@@ -16,4 +16,25 @@ btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
-// (Acá sumaremos la lógica del Comparador Interactivo más adelante)
+// 3. Lógica del Comparador Interactivo de Cristales
+function changeGlass(imgName, btnElement) {
+    const img = document.getElementById('comp-image');
+    const buttons = document.querySelectorAll('.comp-btn');
+    
+    // Remover estados activos de todos los botones
+    buttons.forEach(b => {
+        b.classList.remove('bg-cyan-500', 'text-slate-950', 'active-btn');
+        b.classList.add('bg-slate-800', 'text-slate-300');
+    });
+    
+    // Agregar estado activo al botón clickeado
+    btnElement.classList.remove('bg-slate-800', 'text-slate-300');
+    btnElement.classList.add('bg-cyan-500', 'text-slate-950', 'active-btn');
+    
+    // Efecto visual de transición (Fade In/Out)
+    img.style.opacity = '0.3';
+    setTimeout(() => {
+        img.src = `assets/comparador/${imgName}`;
+        img.style.opacity = '1';
+    }, 200);
+}

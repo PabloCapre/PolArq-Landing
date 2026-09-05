@@ -12,16 +12,17 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Clases utilitarias que usaremos en las siguientes secciones */
+/* Transición para el comparador interactivo */
 .img-transition {
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Contenedor responsive para los videos de YouTube Shorts (16:9 vertical) */
 .yt-short-container {
     position: relative;
     width: 100%;
     padding-top: 177.77%; 
-    border-radius: 0.75rem;
+    border-radius: 0.5rem;
     overflow: hidden;
     background-color: #0f172a;
 }

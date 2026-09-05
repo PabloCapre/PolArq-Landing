@@ -1,1 +1,98 @@
-<h1>asd</h1>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolArq | Films de Privacidad, Control Solar y Seguridad en Mendoza</title>
+    <meta name="description" content="Especialistas en soluciones llave en mano para tus aberturas en Mendoza. Asesoramiento técnico, provisión, instalación profesional y garantía directa en láminas de control solar, privacidad y seguridad.">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    colors: { slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' } }
+                }
+            }
+        }
+    </script>
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 glass-panel transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img class="h-10 w-auto" src="assets/logos-polarq/blue-rectangle.png" alt="PolArq Logo">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#soluciones" class="text-sm font-semibold hover:text-cyan-400 transition-colors">Soluciones</a>
+                    <a href="#comparador" class="text-sm font-semibold hover:text-cyan-400 transition-colors">Comparador</a>
+                    <a href="#proyectos" class="text-sm font-semibold hover:text-cyan-400 transition-colors">Proyectos</a>
+                    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%20PolArq" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-6 py-2.5 rounded-lg font-bold text-sm transition-transform hover:scale-105 shadow-lg shadow-cyan-500/20">
+                        WhatsApp
+                    </a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#soluciones" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400">Soluciones</a>
+                <a href="#comparador" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400">Comparador</a>
+                <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400">Proyectos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/proyectos/back-hero-2.png" alt="Instalación de Films PolArq" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-900/40"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-wide uppercase mb-6">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                    Arquitectura & Control Solar
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Transformá tus espacios. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Controlá el calor y ganá privacidad</span> en Mendoza.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
+                    Brindamos un servicio integral llave en mano para residencias, bodegas y empresas. Nos hacemos cargo de todo el proyecto: desde el diagnóstico y asesoramiento técnico inicial, hasta la provisión del material y una instalación impecable con garantía directa. Confort y rendimiento estético sin intermediarios.
+                </p>
+                <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="inline-flex justify-center items-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-4 rounded-xl font-bold text-base transition-all hover:-translate-y-1 shadow-lg shadow-cyan-500/30">
+                    Solicitar cotización por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archivo JS externo -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -36,3 +36,6 @@
 a:focus, button:focus, *:focus {
     outline: none !important;
 }
+
+/* Eliminar cursor intermitente en las secciones enfocadas por el menu */
+section { caret-color: transparent; }

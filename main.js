@@ -84,4 +84,4 @@ function openModal(partnerId) {
 function closeModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
-}
+} 

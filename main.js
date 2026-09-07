@@ -16,6 +16,14 @@ btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
+// 2.1 Auto-cerrar menú móvil al hacer clic en un enlace
+const mobileLinks = document.querySelectorAll('#mobile-menu a');
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+    });
+});
+
 // 3. Lógica del Comparador Interactivo de Cristales
 function changeGlass(imgName, btnElement) {
     const img = document.getElementById('comp-image');
@@ -64,19 +72,16 @@ const modalLink = document.getElementById('modal-link');
 function openModal(partnerId) {
     const data = partnersData[partnerId];
     
-    // Inyectar datos en el HTML del modal
     modalTitle.textContent = data.title;
     modalDesc.textContent = data.desc;
     modalImg.src = data.img;
     modalLink.href = data.link;
     
-    // Mostrar modal con display flex
     modal.classList.remove('hidden');
     modal.classList.add('flex');
 }
 
 function closeModal() {
-    // Ocultar modal
     modal.classList.add('hidden');
     modal.classList.remove('flex');
 }

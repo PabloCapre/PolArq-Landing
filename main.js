@@ -38,3 +38,45 @@ function changeGlass(imgName, btnElement) {
         img.style.opacity = '1';
     }, 200);
 }
+
+// 4. Lógica de Partners y Ventana Modal
+const partnersData = {
+    blandini: {
+        title: "Blandini Detailing",
+        desc: "Especialistas en estética vehicular. Realizamos tratamientos cerámicos, corrección de pintura, instalación de PPF, limpieza profunda de interiores y tapizados. Llevamos el brillo y la protección de tu vehículo al siguiente nivel, priorizando la atención y superando siempre las expectativas.",
+        img: "assets/partners/blandini.png",
+        link: "https://www.instagram.com/blandini.detailing/"
+    },
+    polart: {
+        title: "PolArt Polarizados",
+        desc: "Expertos en polarizado vehicular nano-cerámico de todas las calidades. Garantizamos la excelencia bajo estrictas normas de instalación dirigidas por Gino. Ofrecemos protección de parabrisas, láminas de seguridad, PPF, accesorios 4x4 y equipos de iluminación LED de alta gama.",
+        img: "assets/partners/polart.png",
+        link: "https://www.instagram.com/polarizados.polart.mendoza/"
+    }
+};
+
+const modal = document.getElementById('partner-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalImg = document.getElementById('modal-img');
+const modalLink = document.getElementById('modal-link');
+
+function openModal(partnerId) {
+    const data = partnersData[partnerId];
+    
+    // Inyectar datos en el HTML del modal
+    modalTitle.textContent = data.title;
+    modalDesc.textContent = data.desc;
+    modalImg.src = data.img;
+    modalLink.href = data.link;
+    
+    // Mostrar modal con display flex
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeModal() {
+    // Ocultar modal
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
